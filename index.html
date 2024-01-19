@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>GitHub Repositories</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>GitHub Repositories</h1>
+        <form id="githubForm">
+        <div class="form-inp">
+            <label for="username">Enter GitHub username</label>
+            <input type="text" class="form-control" id="username" placeholder="e.g., johnpapa" required/>
+        </div>
+        <div class="form-inp">
+             <label for="perPage">Repositories Per Page</label>
+             <input type="number" id="quantity" name="quantity" min="1" max="100">
+        </div>
+        <div>
+            <button class="form-btn">Submit</button>
+        </div>
+    </form>
+    </div>
+
+    <div id="loader" class="loader" style="display: none;">
+        <img src="https://media.tenor.com/6gHLhmwO87sAAAAi/gg.gif" alt="Loading...">
+    </div>
+
+    <div class="content">
+    <div class="user">
+        <img id="user-img" class="user-img"/>
+        <div id="user-info"  class="user-info">
+             <h1 id="user-name" class="user-name"></h1>
+             <div id="user-bio"  class="user-bio"></div>
+             <div id="user-email"  class="user-email"></div>
+             <div id="user-loc"  class="user-loc"></div>
+             <a id="user-url" class="user-url"></a>
+        </div>
+    </div>
+    </div>
+    <div id="repoT" class="repoT"></div>
+    <div id="repositories" class="repositories">
+    </div>
+    <script src="config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>

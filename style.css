@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+h1 {
+    color: #007bff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-inp {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background-color: #0056b3;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1024px;
+    margin-top: 20px;
+}
+
+.user-img {
+    width:25%;
+    height: 10%;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-info {
+    flex: 2; 
+}
+
+.user-name {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+.user-bio, .user-email, .user-loc {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.user-url {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.repositories{
+    display: flex;
+    flex-wrap: wrap;
+    padding:40px;
+}
+
+.repoT{
+    text-align: center;
+    color:#007bff;
+}
+
+.repo-card {
+    flex: 0 0 calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.repo-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color:#007bff
+}
+
+.repo-card p {
+    margin: 0;
+    color: #555;
+}
+
+.repo-card p.description {
+    color: #777;
+}
+
+.repo-card div{
+    display:flex;
+}
+
+.repo-card div.language{
+    padding: auto;
+    margin:auto;
+}
+
+.repo-card h4{
+    padding:5px;
+}
+
+.language {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.language:hover{
+    background-color:hsl(207, 90%, 80%);
+}
+
+.language-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.loader{
+    position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+}
