@@ -122,10 +122,6 @@ function displayRepositories(repositories) {
     });
 }
 
-const searchTerm = document.getElementById('searchInput').value;
-filterRepositories(searchTerm);
-
-
 function filterRepositories(searchTerm) {
     
     if (searchTerm.trim() === '') {
@@ -150,7 +146,7 @@ async function getPaginatedData(username, perPage) {
     let pagesRemaining = true;
 
     const octokit = new Octokit({
-        auth: window.config.apiKey,
+        auth: process.env.apiKey,
       });
      
     let url = `/users/${username}/repos`;
