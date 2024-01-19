@@ -189,7 +189,7 @@ document.getElementById('githubForm').addEventListener('submit', async function(
     console.log('Repositories Per Page:', perPage);
 
     const octokit = new Octokit({
-        auth: window.config.apiKey,
+        auth: process.env.apiKey,
       })
      
      try{ 
