@@ -146,7 +146,7 @@ async function getPaginatedData(username, perPage) {
     let pagesRemaining = true;
 
     const octokit = new Octokit({
-        auth: process.env.apiKey,
+        auth: window.config.apiKey,
       });
      
     let url = `/users/${username}/repos`;
@@ -189,7 +189,7 @@ document.getElementById('githubForm').addEventListener('submit', async function(
     console.log('Repositories Per Page:', perPage);
 
     const octokit = new Octokit({
-        auth: process.env.apiKey,
+        auth: window.config.apiKey,
       })
      
      try{ 
